@@ -19,4 +19,4 @@ mongoose.connect(uri, {
 // connectionDB();
 server.use(routes);
 
-server.listen(process.env.PORT || 3333);
+server.listen(process.env.PORT ? process.env.PORT : 3333);
