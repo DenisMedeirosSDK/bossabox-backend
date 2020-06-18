@@ -2,7 +2,7 @@ import 'dotenv';
 import mongoose from 'mongoose';
 
 function connection() {
-  mongoose.connect(process.env.MONGO_URL, {
+  mongoose.connect(process.env.MONGO_URL as string, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
