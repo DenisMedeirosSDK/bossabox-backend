@@ -1,17 +1,17 @@
 import mongose, { Schema, Document } from 'mongoose';
 
 interface ITool extends Document {
-  title: String,
-  description: String,
-  link: String,
-  tags: [String]
+  title: string;
+  description: string;
+  link: string;
+  tags: [string];
 }
 
-const ToolSchema:Schema = new Schema({
+const ToolSchema: Schema = new Schema({
   title: String,
   description: String,
   link: String,
-  tags: [String]
+  tags: [String],
 });
 
 const Tool = mongose.model<ITool>('Tools', ToolSchema);

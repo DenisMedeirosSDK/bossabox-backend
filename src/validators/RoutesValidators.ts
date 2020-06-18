@@ -1,5 +1,4 @@
-import { celebrate, Joi, errors, Segments } from 'celebrate';
-
+import { celebrate, Joi, Segments } from 'celebrate';
 
 const validators = {
   createTool: celebrate({
@@ -7,19 +6,19 @@ const validators = {
       title: Joi.string().required(),
       description: Joi.string().required(),
       link: Joi.string().required(),
-      tags: Joi.string()
-    })
+      tags: Joi.string(),
+    }),
   }),
   searchTags: celebrate({
     [Segments.QUERY]: Joi.object().keys({
       tags: Joi.string().required().lowercase(),
-    })
+    }),
   }),
   deleteTool: celebrate({
     [Segments.PARAMS]: Joi.object().keys({
-      id: Joi.string().required()
-    })
-  })
-}
+      id: Joi.string().required(),
+    }),
+  }),
+};
 
 export default validators;
