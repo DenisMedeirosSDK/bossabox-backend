@@ -1,11 +1,5 @@
-import 'dotenv';
-import mongoose from 'mongoose';
+// import 'dotenv';
 
-function connection(): void {
-  mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/tools', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-}
+// function connection(): void {}
 
-export default connection;
+// export default connection;
