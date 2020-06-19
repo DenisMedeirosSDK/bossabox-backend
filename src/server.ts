@@ -10,7 +10,7 @@ const uri = process.env.MONGO_URL
 const server = express();
 
 server.use(express.json());
-server.use(cors());
+server.use(cors({ origin: 'https://bossabox-fr.herokuapp.com/' }));
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
